@@ -23,7 +23,6 @@ import contactRoutes from "./routes/contact.js"
 import adminRoutes from "./routes/admin.js"
 import uploadRoutes from "./routes/upload.js"
 import webhookRoutes from "./routes/webhooks.js"
-import { body } from "express-validator"
 
 // Load environment variables
 dotenv.config()

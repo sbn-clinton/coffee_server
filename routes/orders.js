@@ -2,7 +2,6 @@ import express from "express"
 import Order from "../models/Order.js"
 import Product from "../models/Product.js"
 import { authenticate, authorize } from "../middleware/auth.js"
-import { createPaymentIntent } from "../utils/stripe.js"
 import { v4 as uuidv4 } from 'uuid';
 import Stripe from "stripe";
 import { sendContactEmail } from "../utils/email.js"
