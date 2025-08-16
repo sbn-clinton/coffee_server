@@ -7,7 +7,6 @@ import rateLimit from "express-rate-limit"
 import swaggerJsdoc from "swagger-jsdoc"
 import swaggerUi from "swagger-ui-express"
 import dotenv from "dotenv"
-import bodyParser from "body-parser"
 
 import connectDB from "./config/database.js"
 import errorHandler from "./middleware/errorHandler.js"
