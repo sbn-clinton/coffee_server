@@ -21,7 +21,6 @@ import subscriptionRoutes from "./routes/subscriptions.js"
 import blogRoutes from "./routes/blog.js"
 import contactRoutes from "./routes/contact.js"
 import adminRoutes from "./routes/admin.js"
-import uploadRoutes from "./routes/upload.js"
 import webhookRoutes from "./routes/webhooks.js"
 
 // Load environment variables
@@ -118,7 +117,6 @@ app.use("/api/subscriptions", subscriptionRoutes)
 app.use("/api/blog", blogRoutes)
 app.use("/api/contact", contactRoutes)
 app.use("/api/admin", adminRoutes)
-app.use("/api/upload", uploadRoutes)
 app.use("/api/webhooks", webhookRoutes)
 app.use("/api/newsletter", newsletterRoutes)
 
