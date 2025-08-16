@@ -5,6 +5,11 @@ import { authenticate, authorize } from "../middleware/auth.js"
 import { v4 as uuidv4 } from 'uuid';
 import Stripe from "stripe";
 import { sendContactEmail } from "../utils/email.js"
+import dotenv from "dotenv"
+
+
+// Load environment variables
+dotenv.config()
 
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
@@ -262,8 +267,8 @@ router.post("/", async (req, res, next) => {
         orderNumber: order.orderNumber,
       },
       customer_email: shippingAddress.email,
-      success_url: "http://localhost:3000/checkout/success?session_id={CHECKOUT_SESSION_ID}",
-      cancel_url: "http://localhost:3000/checkout/cancel",
+      success_url: `${process.env.FRONTEND_URL}/checkout/success?session_id=${CHECKOUT_SESSION_ID}`,
+      cancel_url: `${process.env.FRONTEND_URL}/checkout/success`,
     });
 
     // Save the session ID for later verification if needed
